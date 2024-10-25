@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./main.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="gift">
+            <input id="click" type="checkbox">
+            <label class="click" for="click"></label>
+            <div class="wishes">Happy Birthday!</div>
+        
+            <audio id="birthdayMusic" loop>
+                <source src="./IMG_8625.mp3" type="audio/mp3">
+            
+            </audio>
+
+              
+            <div class="sparkles">
+                <div class="spark1"></div>
+                <div class="spark2"></div>
+                <div class="spark3"></div>
+                <div class="spark4"></div>
+                <div class="spark5"></div>
+                <div class="spark6"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('click').addEventListener('change', function() {
+            const music = document.getElementById('birthdayMusic');
+            if (this.checked) {
+                music.play();
+            } else {
+                music.pause();
+                music.currentTime = 0; 
+            }
+        });
+    </script>
+    
+   
+</body>
+</html>
